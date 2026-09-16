@@ -1,69 +1,180 @@
+import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
+import DeviceLookup from "@/components/DeviceLookup";
+import SpecBadge from "@/components/SpecBadge";
+import { articles } from "@/lib/articles";
+import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/site";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: `${SITE_NAME} — Pod, coil and e-liquid compatibility reference`,
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
+};
+
+const browseBy = [
+  {
+    title: "By Device",
+    description:
+      "Start from what you own. Work out your device's coil family, pod part number and the wattage range it's designed to run.",
+    href: "/guides",
+    cta: "Browse device guides",
+  },
+  {
+    title: "By Coil Type",
+    description:
+      "Sub-ohm mesh, MTL ceramic, or a standard round-wire head — see resistance ranges and what each type is built for.",
+    href: "/coils",
+    cta: "See coil reference",
+  },
+  {
+    title: "By E-liquid Ratio",
+    description:
+      "VG/PG ratio and nicotine strength both need to match your hardware. Check what pairs with what before you refill.",
+    href: "/pods",
+    cta: "See pod & ratio reference",
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      <section className="border-b-2 border-ink/10 bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <span className="inline-block border border-teal/40 bg-teal/10 px-2.5 py-1 font-mono text-xs font-medium uppercase tracking-wider text-teal">
+                UK compatibility reference
+              </span>
+              <h1 className="mt-4 font-heading text-4xl font-bold leading-tight text-ink sm:text-5xl">
+                Look up your device. Get the right coil, pod and ratio.
+              </h1>
+              <p className="mt-4 max-w-xl text-lg text-ink/70">
+                {SITE_NAME} is a reference-style site for adult vapers who
+                already own a device and need to know which replacement pod
+                or coil fits it, and why their current setup might be
+                underperforming.
+              </p>
+              <div className="mt-6">
+                <DeviceLookup />
+              </div>
+              <p className="mt-3 font-mono text-xs text-ink/45">
+                Try: “0.6 ohm”, “MTL pod”, “nic salt” or a device family name.
+              </p>
+            </div>
+            <div className="relative aspect-[4/3] w-full overflow-hidden border-2 border-ink/10">
+              <Image
+                src="/images/coil-mod-red-black-hero.jpg"
+                alt="Red and black box mod device standing upright on a dark surface"
+                fill
+                priority
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <h2 className="font-heading text-2xl font-bold text-ink">Browse by</h2>
+        <p className="mt-2 max-w-2xl text-ink/70">
+          Three ways into the same reference material, depending on what you
+          already know.
+        </p>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {browseBy.map((item) => (
+            <div
+              key={item.title}
+              className="flex flex-col border-2 border-ink/12 bg-white p-6 transition-colors hover:border-teal"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              <h3 className="font-heading text-xl font-bold text-ink">
+                {item.title}
+              </h3>
+              <p className="mt-2 flex-1 text-sm text-ink/70">
+                {item.description}
+              </p>
+              <Link
+                href={item.href}
+                className="mt-4 inline-flex w-fit items-center gap-1.5 border-2 border-teal px-4 py-2 font-mono text-xs font-semibold text-teal transition-colors hover:bg-teal hover:text-bg"
+              >
+                {item.cta} →
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-y-2 border-ink/10 bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="font-heading text-2xl font-bold text-ink">
+                Featured guides
+              </h2>
+              <p className="mt-2 max-w-2xl text-ink/70">
+                Our three launch references, covering compatibility,
+                troubleshooting and the resistance/ratio relationship.
+              </p>
+            </div>
+            <Link
+              href="/guides"
+              className="border-2 border-ink/15 px-4 py-2 font-mono text-xs font-semibold text-ink/70 transition-colors hover:border-teal hover:text-teal"
             >
-              Learning
-            </a>{" "}
-            center.
+              View all guides →
+            </Link>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {articles.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/guides/${article.slug}`}
+                className="group relative flex flex-col border-2 border-ink/12 bg-bg p-5 transition-colors hover:border-teal"
+              >
+                <span className="absolute -top-3 right-4">
+                  <SpecBadge className="bg-white">
+                    {article.specBadges[0]}
+                  </SpecBadge>
+                </span>
+                <span className="font-mono text-xs uppercase tracking-wider text-teal">
+                  {article.category}
+                </span>
+                <h3 className="mt-2 font-heading text-lg font-bold leading-snug text-ink group-hover:text-teal">
+                  {article.title}
+                </h3>
+                <p className="mt-2 text-sm text-ink/70">{article.excerpt}</p>
+                <div className="mt-4 flex items-center justify-between font-mono text-xs text-ink/50">
+                  <span>{article.readTime}</span>
+                  <span>{article.lastUpdatedLabel}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div className="border-2 border-amber/40 bg-amber/10 p-6 sm:p-8">
+          <h2 className="font-heading text-xl font-bold text-ink">
+            How we source specs
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-ink/80">
+            Every resistance, wattage and capacity figure on {SITE_NAME} is
+            taken from manufacturer packaging, manufacturer datasheets or
+            official product listings, and is clearly attributed as a
+            manufacturer-stated specification rather than something we have
+            independently lab-tested. Where a spec commonly varies by batch
+            or region (nicotine strength limits, tank fill volumes), we say
+            so rather than quoting a single fixed figure. Regulatory facts
+            reference UK sources such as GOV.UK and the MHRA. See our{" "}
+            <Link href="/editorial-policy" className="underline hover:text-amber-ink">
+              editorial policy
+            </Link>{" "}
+            for how we research and update guides.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
