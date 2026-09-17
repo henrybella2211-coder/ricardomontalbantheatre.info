@@ -56,6 +56,35 @@ export const articles: Article[] = [
     heroImage: "/images/eliquid-bottle-with-device.jpg",
     heroAlt: "Bottle of e-liquid standing next to a pod mod device on a table",
   },
+  {
+    slug: "kanthal-mesh-ceramic-coils-whats-the-difference",
+    title: "Kanthal, mesh and ceramic coils: what's the difference?",
+    category: "Specifications",
+    excerpt:
+      "The three coil build materials you'll see most often in replacement coils, how each is said to affect flavour, vapour, ramp-up time and lifespan, and a comparison table to check your own coil against.",
+    specBadges: ["Kanthal / mesh / ceramic", "Ramp-up time", "Flavour vs vapour"],
+    datePublished: "2026-08-20",
+    dateModified: "2026-09-16",
+    lastUpdatedLabel: "Last updated 16 September 2026",
+    readTime: "8 min read",
+    heroImage: "/images/kanthal-mesh-ceramic-atomizer-coil.jpg",
+    heroAlt:
+      "Close-up of a clear atomizer tank showing the coil and wicking chamber inside",
+  },
+  {
+    slug: "replacing-your-coil-vs-replacing-the-whole-pod",
+    title: "Replacing your coil vs replacing the whole pod: how to decide",
+    category: "Compatibility",
+    excerpt:
+      "Why some devices need a whole new pod every time and others just need a coil swap, the typical cost difference between the two, and how to check which type of system you actually own.",
+    specBadges: ["Closed vs open pods", "£ per replacement", "System ID checklist"],
+    datePublished: "2026-08-25",
+    dateModified: "2026-09-17",
+    lastUpdatedLabel: "Last updated 17 September 2026",
+    readTime: "8 min read",
+    heroImage: "/images/pod-vape-kit-eliquid-bottle.jpg",
+    heroAlt: "Pod vape kit standing next to its e-liquid bottle on a table",
+  },
 ];
 
 export function getArticle(slug: string) {

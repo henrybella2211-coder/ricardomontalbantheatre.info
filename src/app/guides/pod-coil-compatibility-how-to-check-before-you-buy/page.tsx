@@ -186,6 +186,18 @@ export default function Page() {
           </table>
         </div>
 
+        <p>
+          The resistance value only tells you the power and draw style a
+          coil is built for. It doesn&apos;t tell you what the coil is made
+          from, which affects how it actually feels in use. For how
+          Kanthal wire, mesh and ceramic builds differ in flavour, vapour,
+          ramp-up time and lifespan, see our guide to{" "}
+          <Link href="/guides/kanthal-mesh-ceramic-coils-whats-the-difference" className="text-teal underline hover:text-teal-dark">
+            Kanthal, mesh and ceramic coils
+          </Link>
+          .
+        </p>
+
         <h2 className="font-heading text-2xl font-bold text-ink">
           A worked example: matching coil to e-liquid
         </h2>

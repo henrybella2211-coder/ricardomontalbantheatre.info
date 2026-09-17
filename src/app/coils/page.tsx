@@ -129,7 +129,12 @@ export default function CoilsPage() {
         products and are provided as general reference, not measurements
         {SITE_NAME} has independently tested. Always check the specific coil
         packaging for the manufacturer-stated resistance and wattage range.
-        For pod capacity and e-liquid ratio pairing, see our{" "}
+        For how the wire, mesh or ceramic build inside a coil affects
+        flavour, vapour and lifespan, see our guide to{" "}
+        <Link href="/guides/kanthal-mesh-ceramic-coils-whats-the-difference" className="text-teal underline hover:text-teal-dark">
+          Kanthal, mesh and ceramic coils
+        </Link>
+        . For pod capacity and e-liquid ratio pairing, see our{" "}
         <Link href="/pods" className="text-teal underline hover:text-teal-dark">
           pod reference
         </Link>

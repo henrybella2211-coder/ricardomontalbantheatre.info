@@ -111,6 +111,12 @@ export default function PodsPage() {
         <Link href="/guides/coil-resistance-eliquid-ratio-explained" className="text-teal underline hover:text-teal-dark">
           coil resistance and e-liquid ratio explained
         </Link>
+        . If you&apos;re not sure whether your own pod lets you replace just
+        the coil or only the whole pod, and what that costs either way, see
+        our guide to{" "}
+        <Link href="/guides/replacing-your-coil-vs-replacing-the-whole-pod" className="text-teal underline hover:text-teal-dark">
+          replacing your coil versus replacing the whole pod
+        </Link>
         . Capacities and ratios above are general reference figures rather
         than measurements {SITE_NAME} has independently tested.
       </p>

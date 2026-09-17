@@ -113,8 +113,9 @@ export default function HomePage() {
                 Featured guides
               </h2>
               <p className="mt-2 max-w-2xl text-ink/70">
-                Our three launch references, covering compatibility,
-                troubleshooting and the resistance/ratio relationship.
+                Our compatibility reference guides, covering coil and pod
+                compatibility, troubleshooting, resistance and ratio, coil
+                materials, and closed versus open pod systems.
               </p>
             </div>
             <Link

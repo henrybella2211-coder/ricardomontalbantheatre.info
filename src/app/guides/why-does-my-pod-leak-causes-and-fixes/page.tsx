@@ -173,7 +173,13 @@ export default function Page() {
           flavour and vapour production drop off noticeably, which is often a
           good natural point to check the seals as well. Typical replacement
           pods cost in the region of £8–£15 for a pack, depending on the
-          brand and pack size.
+          brand and pack size. If you&apos;re not sure whether your device
+          even lets you replace just the coil rather than the whole pod, see
+          our guide to{" "}
+          <Link href="/guides/replacing-your-coil-vs-replacing-the-whole-pod" className="text-teal underline hover:text-teal-dark">
+            replacing your coil versus replacing the whole pod
+          </Link>
+          .
         </p>
 
         <p>
