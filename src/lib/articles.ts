@@ -85,6 +85,20 @@ export const articles: Article[] = [
     heroImage: "/images/pod-vape-kit-eliquid-bottle.jpg",
     heroAlt: "Pod vape kit standing next to its e-liquid bottle on a table",
   },
+  {
+    slug: "al-fakher-hypermax-prime-50k-pod-and-coil-compatibility-explained",
+    title: "Al Fakher HyperMax Prime 50K: pod and coil compatibility explained",
+    category: "Compatibility",
+    excerpt:
+      "How the HyperMax Prime 50K's \"Snap Dual\" module works, why its pods aren't a separate coil-and-pod pairing like some open systems, and how the whole design compares to the closed and open pod systems covered elsewhere on this site.",
+    specBadges: ["Snap Dual pods", "2ml pod cap", "Rechargeable, closed system"],
+    datePublished: "2026-09-15",
+    dateModified: "2026-09-18",
+    lastUpdatedLabel: "Last updated 18 September 2026",
+    readTime: "7 min read",
+    heroImage: "/images/rechargeable-pod-vape-kit-table.jpg",
+    heroAlt: "A rechargeable pod vape kit and its pod resting on a wooden table",
+  },
 ];
 
 export function getArticle(slug: string) {

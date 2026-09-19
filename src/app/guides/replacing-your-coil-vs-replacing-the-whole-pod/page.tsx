@@ -130,7 +130,16 @@ export default function Page() {
           day to day: no priming, no matching coil resistance to the right
           e-liquid, just click a new pod in. The trade-off is that you&apos;re
           paying for a new coil every single time you replace the e-liquid
-          supply, even if the old coil still had life left in it.
+          supply, even if the old coil still had life left in it. Rechargeable
+          kits built around a sealed, snap-in pod module, such as the{" "}
+          <Link
+            href="/guides/al-fakher-hypermax-prime-50k-pod-and-coil-compatibility-explained"
+            className="text-teal underline hover:text-teal-dark"
+          >
+            Al Fakher HyperMax Prime 50K
+          </Link>
+          , follow this same closed-system logic even though the battery
+          itself is reusable.
         </p>
 
         <h2 className="font-heading text-2xl font-bold text-ink">
