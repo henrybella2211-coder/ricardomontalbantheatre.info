@@ -138,6 +138,14 @@ export default function CoilsPage() {
         <Link href="/pods" className="text-teal underline hover:text-teal-dark">
           pod reference
         </Link>
+        . If you&apos;re choosing a nic salt strength for an MTL coil, see our
+        guide to{" "}
+        <Link
+          href="/guides/which-nic-salt-strength-suits-which-coil-and-device"
+          className="text-teal underline hover:text-teal-dark"
+        >
+          which nic salt strength suits which coil and device
+        </Link>
         .
       </p>
     </div>

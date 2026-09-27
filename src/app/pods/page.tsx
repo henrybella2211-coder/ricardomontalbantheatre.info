@@ -117,6 +117,14 @@ export default function PodsPage() {
         <Link href="/guides/replacing-your-coil-vs-replacing-the-whole-pod" className="text-teal underline hover:text-teal-dark">
           replacing your coil versus replacing the whole pod
         </Link>
+        . For how nic salt strength interacts with coil resistance and draw,
+        see our guide to{" "}
+        <Link
+          href="/guides/which-nic-salt-strength-suits-which-coil-and-device"
+          className="text-teal underline hover:text-teal-dark"
+        >
+          which nic salt strength suits which coil and device
+        </Link>
         . Capacities and ratios above are general reference figures rather
         than measurements {SITE_NAME} has independently tested.
       </p>

@@ -99,6 +99,21 @@ export const articles: Article[] = [
     heroImage: "/images/rechargeable-pod-vape-kit-table.jpg",
     heroAlt: "A rechargeable pod vape kit and its pod resting on a wooden table",
   },
+  {
+    slug: "which-nic-salt-strength-suits-which-coil-and-device",
+    title: "Which nic salt strength suits which coil and device?",
+    category: "Specifications",
+    excerpt:
+      "How 5mg, 10mg and 20mg nic salt strengths interact with coil resistance, wattage and draw, why nic salts are usually paired with lower-power MTL setups rather than sub-ohm devices, and a reference table to check your own combination against.",
+    specBadges: ["5mg / 10mg / 20mg", "50/50 PG/VG", "MTL coil pairing"],
+    datePublished: "2026-09-21",
+    dateModified: "2026-09-27",
+    lastUpdatedLabel: "Last updated 27 September 2026",
+    readTime: "8 min read",
+    heroImage: "/images/nic-salt-bottle-pod-device.jpg",
+    heroAlt:
+      "A bottle of nicotine salt e-liquid standing next to a pod vape device on a table",
+  },
 ];
 
 export function getArticle(slug: string) {
