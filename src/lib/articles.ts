@@ -114,6 +114,20 @@ export const articles: Article[] = [
     heroAlt:
       "A bottle of nicotine salt e-liquid standing next to a pod vape device on a table",
   },
+  {
+    slug: "lost-mary-bm6000-mesh-coil-and-pod-compatibility-explained",
+    title: "Lost Mary BM6000: mesh coil and pod compatibility explained",
+    category: "Compatibility",
+    excerpt:
+      "How the Lost Mary BM6000's built-in mesh coil pods work, why replacement pods are specific to this device, and how draw-activated firing differs from button-fired devices.",
+    specBadges: ["Built-in mesh coil", "Draw-activated", "Rechargeable, closed system"],
+    datePublished: "2026-09-29",
+    dateModified: "2026-09-30",
+    lastUpdatedLabel: "Last updated 30 September 2026",
+    readTime: "7 min read",
+    heroImage: "/images/mesh-coil-pod-kit-table.jpg",
+    heroAlt: "A rechargeable pod vape kit resting on a table with its pod removed",
+  },
 ];
 
 export function getArticle(slug: string) {

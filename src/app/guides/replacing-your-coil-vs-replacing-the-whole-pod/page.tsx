@@ -139,7 +139,16 @@ export default function Page() {
             Al Fakher HyperMax Prime 50K
           </Link>
           , follow this same closed-system logic even though the battery
-          itself is reusable.
+          itself is reusable. The{" "}
+          <Link
+            href="/guides/lost-mary-bm6000-mesh-coil-and-pod-compatibility-explained"
+            className="text-teal underline hover:text-teal-dark"
+          >
+            Lost Mary BM6000
+          </Link>{" "}
+          is another example: its pods carry a built-in mesh coil, draw
+          activated rather than button-fired, so the whole pod is replaced
+          together once it&apos;s empty.
         </p>
 
         <h2 className="font-heading text-2xl font-bold text-ink">

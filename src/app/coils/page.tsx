@@ -146,6 +146,14 @@ export default function CoilsPage() {
         >
           which nic salt strength suits which coil and device
         </Link>
+        . For a worked example of a device whose mesh coil is sealed inside
+        the pod rather than sold as a separate part, see our guide to{" "}
+        <Link
+          href="/guides/lost-mary-bm6000-mesh-coil-and-pod-compatibility-explained"
+          className="text-teal underline hover:text-teal-dark"
+        >
+          Lost Mary BM6000 mesh coil and pod compatibility
+        </Link>
         .
       </p>
     </div>

@@ -125,6 +125,14 @@ export default function PodsPage() {
         >
           which nic salt strength suits which coil and device
         </Link>
+        . For a closed pod kit with a draw-activated firing mechanism and a
+        mesh coil built into every pod, see our guide to{" "}
+        <Link
+          href="/guides/lost-mary-bm6000-mesh-coil-and-pod-compatibility-explained"
+          className="text-teal underline hover:text-teal-dark"
+        >
+          Lost Mary BM6000 pod compatibility
+        </Link>
         . Capacities and ratios above are general reference figures rather
         than measurements {SITE_NAME} has independently tested.
       </p>
